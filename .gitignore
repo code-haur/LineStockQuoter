@@ -1,0 +1,7 @@
+# djangogirls/.gitignore
+
+quoter_venv
+*.pyc
+__pycache__
+staticfiles
+db.sqlite3
