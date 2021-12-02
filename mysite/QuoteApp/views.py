@@ -21,7 +21,8 @@ def stock_crawler(targets):
     #clear_output(wait=True)
     
     # 組成stock_list
-    stock_list = '|'.join('tse_{}.tw'.format(target) for target in targets) 
+    #stock_list = '|'.join('tse_{}.tw'.format(target) for target in targets) 
+    stock_list ='tse_{}.tw'.format(targets)
     
     #　query data
     query_url = "http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch="+ stock_list
