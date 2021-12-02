@@ -1,18 +1,8 @@
 # LineStockQuoter
-* 這是一個用 Django, Line API 架設並部署在 Heroku 的Line聊天機器人。
+* 這是一個用 Django, Line API 架設並部署在 Heroku 的Line聊天機器人，只要輸入上市股票代號即可回應當日漲跌、成交量等訊息。
 
 ![home](/static/githubImages/4.PNG)
 
-## 功能
-* 響應式(RWD)網站設計
-* 首頁圖片輪播(Carousel)
-* 首頁商品導覽換頁(Paginator)
-* 使用者登入驗證與註冊(django auth)
-* 第三方登入驗證(Google、GitHub)
-* 利用URL patterns增刪購物車內容(Restful API)
-* 將商品加入購物車(django-shopping-cart)並提交訂單(session)
-* 發送訂單確認的電子郵件給顧客(SMTP + Gmail)
-* Admin管理後臺可以上傳產品圖片(django-filer)
 
 ## 使用技術與工具
 * 前端:
@@ -22,18 +12,16 @@
     - [Bootstrap(4.5.2)](https://getbootstrap.com/)
 * 後端:
     - [Django(3.1.7)](https://www.djangoproject.com/)
-        - session
-        - form
-        - email(SMTP+Gmail)
         - django-allauth(Google、GitHub)  
         - django-shopping-cart
         - djagno-filer
+    - [LINE Messaging API](https://developers.line.biz/en/docs/messaging-api/)
 * 資料庫:
     - [MySQL](https://www.mysql.com/)
     - [PostgreSQL(Heroku)](https://www.postgresql.org/)
     - [SQLite](https://www.sqlite.org/index.html)
 * 部署:
-    - [Docker](https://www.docker.com/)
+    - [Ngrok](https://ngrok.com/)
     - [Heroku](https://dashboard.heroku.com/)
 
 ## 專案上遇到的問題
