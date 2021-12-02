@@ -1,7 +1,7 @@
 # LineStockQuoter
 * 這是一個用 Django, Line API 架設並部署在 Heroku 的Line聊天機器人，只要輸入上市股票代號即可回應當日漲跌、成交量等訊息。
 
-![home](/Screenshot_LINE.PNG)
+![home](/Screenshot_LINE.jpg)
 
 
 ## 使用技術與工具
