@@ -38,7 +38,7 @@
 
 ### Heroku部署
 * Heroku 部署需要提供三個檔案，`Procfile`、`requirements.txt`、`runtime.txt`
-* `Procfile`是要告訴 Heroku 要使用 Gunicorn 來啟動 web server
+* `Procfile`是要告訴 Heroku 要使用 Gunicorn 來啟動 web server，從而調用 web application (Django)
 * `requirements.txt`用來告訴Heroku雲端平台有哪些套件需要進行安裝，於專案虛擬環境執行 `pip freeze > requirements.txt` 指令會生成
 * `runtime.txt`是用來告訴 heroku 執行程式碼的 Python 版本，若沒指定 heroku 預設安裝最新版 Python，並依`requirements.txt`安裝支援該版本 Python 的套件，但 shioaji 套件目前只有支援到 Python 3.7，必須在`runtime.txt`指定 Python 3.7版，避免於推送程式碼時出現許多找無可用套件而部署失敗
 * Heroku 資料庫是使用 PostgreSQL，要手動在 requirements.txt 加上 psycopg2==2.9（Python 的 PostgreSQL 模組)，以及 `settings.py` 裏頭要修改DB連結的方式，才能在 Heroku 上部署成功
