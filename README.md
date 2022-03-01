@@ -12,12 +12,8 @@
     - urllib
 * 後端:
     - [Django(3.2.7)](https://www.djangoproject.com/)
-        - django-allauth(Google、GitHub)  
-        - django-shopping-cart
-        - djagno-filer
     - [LINE Messaging API](https://developers.line.biz/en/docs/messaging-api/)
 * 資料庫:
-    - [MySQL](https://www.mysql.com/)
     - [PostgreSQL(Heroku)](https://www.postgresql.org/)
     - [SQLite](https://www.sqlite.org/index.html)
 * 部署:
@@ -27,10 +23,6 @@
 ## 專案上遇到的問題
 ### Config組態設定
 * 因為公開於 github 並部署於 heroku ，當中敏感資訊如: LINE token、帳號、密碼等，容易會有外露的資安問題，所以將散佈檔案中的敏感參數集中在 .env 的組態設定檔，其載入環境變數中作使用，掌控 .env 上傳即可避免敏感資訊曝露，也方便統一管理所需要的參數
-
-### Django套件
-* `django-shopping-cart` 內建的 `add` 函式無法存取 product，導致 `OrderItem` 這個 model 無法跟 `Product` 這個 model 以 foreign key 做關聯，地端程式碼可以手動修改，但部署到 Heroku 就無法修改套件py檔內容，因此最後 Heroku app 取消關聯到 `Product` 這個資料表
-* `python manage.py makemigrations` 若失效，要進到 `migrations` 資料夾，手動查找每個版本的py檔，找出與model修正有關聯的檔案，手動修正或刪除，重新執行此指令即可成功運行
 
 ### line-bot套件
 * Django應用程式中需要使用line-bot套件設定 webhook，藉由Messaging API使應用程式與LINE Platform溝通。
